@@ -3,44 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+using API_4TELL.Models;
 
 namespace API_4TELL.Controllers
 {
     [Route("api/[controller]")]
-    public class ValuesController : Controller
+    public class CategoriesController : Controller
     {
-        // GET: api/values
+        private readonly ApplicationContext _context;
+
+        public CategoriesController(ApplicationContext context)
+        {
+            _context = context;
+
+            if (_context.Categories.Count() == 0)
+            {
+                Product newProduct = new Product(3, "Running Shoes", "Running");
+                _context.Categories.Add(new Category { CategoryId = 1, CategoryName = "Running", Products = { newProduct } });
+                
+                _context.SaveChanges();
+            }
+        }
+
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Product> GetAll()
         {
-            return new string[] { "value1", "value2" };
+            return _context.Products.ToList();
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{id}", Name = "GetTodo")]
+        public IActionResult GetById(long id)
         {
-            return "value";
-        }
+            var item = _context.Products.FirstOrDefault(t => t.ProductId == id);
+            if (item == null)
+            {
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+                return NotFound();
+            }
+            return new ObjectResult(item);
         }
     }
 }
