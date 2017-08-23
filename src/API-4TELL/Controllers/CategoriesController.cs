@@ -19,10 +19,16 @@ namespace API_4TELL.Controllers
 
             if (_context.Categories.Count() == 0)
             {
-                Product newProduct = new Product(3, "Running Shoes", "Running");
-                Category newCategory = new Category(1, "Running");
-                newCategory.Products.Add(newProduct);
-                _context.Categories.Add(newCategory);
+
+                Product runningShoes = new Product(3, "Running Shoes", "Running");
+                Category running = new Category(1, "Running");
+                running.Products.Add(runningShoes);
+                _context.Categories.Add(running);
+
+                Product baseballBat = new Product(4, "baseball Bat", "Baseball");
+                Category baseball = new Category(2, "Baseball");
+                baseball.Products.Add(baseballBat);
+                _context.Categories.Add(baseball);
                 
                 _context.SaveChanges();
             }
@@ -35,7 +41,7 @@ namespace API_4TELL.Controllers
         }
 
         [HttpGet("{name}", Name = "GetCategory")]
-        public IActionResult GetByName(string name)
+        public IActionResult GetProducts(string name)
         {
             var category = _context.Categories.FirstOrDefault(t => t.CategoryName == name);
             if (category == null)

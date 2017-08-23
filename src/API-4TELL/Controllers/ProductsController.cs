@@ -25,9 +25,22 @@ namespace API_4TELL.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Product> GetAll()
+        public IActionResult GetAll(int? id)
         {
-            return _context.Products.ToList();
+            if (id.HasValue)
+            {
+                var product = _context.Products.FirstOrDefault(t => t.ProductId == id);
+                if (product == null)
+                {
+
+                    return NotFound();
+                }
+                return new ObjectResult(product);
+            }
+            else
+            {
+                return new ObjectResult(_context.Products.ToList());
+            }
         }
 
         [HttpGet("{id}", Name = "GetProduct")]
@@ -43,3 +56,12 @@ namespace API_4TELL.Controllers
         }
     }
 }
+//public string Get(int? id, string firstName, string lastName, string address)
+//{
+//    if (id.HasValue)
+//        GetById(id);
+//    else if (string.IsNullOrEmpty(address))
+//        GetByName(firstName, lastName);
+//    else
+//        GetByNameAddress(firstName, lastName, address);
+//}
