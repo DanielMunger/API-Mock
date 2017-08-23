@@ -21,7 +21,6 @@ namespace API_4TELL.Controllers
             {
                 Product newProduct = new Product(3, "Running Shoes", "Running");
                 Category newCategory = new Category(1, "Running");
-                Debug.WriteLine(newProduct.ProductName);
                 newCategory.Products.Add(newProduct);
                 _context.Categories.Add(newCategory);
                 
@@ -36,15 +35,15 @@ namespace API_4TELL.Controllers
         }
 
         [HttpGet("{name}", Name = "GetCategory")]
-        public IActionResult GetById(string name)
+        public IActionResult GetByName(string name)
         {
-            var item = _context.Categories.FirstOrDefault(t => t.CategoryName == name);
-            if (item == null)
+            var category = _context.Categories.FirstOrDefault(t => t.CategoryName == name);
+            if (category == null)
             {
 
                 return NotFound();
             }
-            return new ObjectResult(item);
+            return new ObjectResult(category);
         }
     }
 }

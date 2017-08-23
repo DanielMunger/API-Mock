@@ -33,13 +33,13 @@ namespace API_4TELL.Controllers
         [HttpGet("{id}", Name = "GetProduct")]
         public IActionResult GetById(long id)
         {
-            var item = _context.Products.FirstOrDefault(t => t.ProductId == id);
-            if (item == null)
+            var product = _context.Products.FirstOrDefault(t => t.ProductId == id);
+            if (product == null)
             {
                
                 return NotFound();
             }
-            return new ObjectResult(item);
+            return new ObjectResult(product);
         }
     }
 }
