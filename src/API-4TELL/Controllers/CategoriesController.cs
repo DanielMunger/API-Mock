@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using API_4TELL.Models;
+using System.Diagnostics;
 
 namespace API_4TELL.Controllers
 {
@@ -19,22 +20,25 @@ namespace API_4TELL.Controllers
             if (_context.Categories.Count() == 0)
             {
                 Product newProduct = new Product(3, "Running Shoes", "Running");
-                _context.Categories.Add(new Category { CategoryId = 1, CategoryName = "Running", Products = { newProduct } });
+                Category newCategory = new Category(1, "Running");
+                Debug.WriteLine(newProduct.ProductName);
+                newCategory.Products.Add(newProduct);
+                _context.Categories.Add(newCategory);
                 
                 _context.SaveChanges();
             }
         }
 
         [HttpGet]
-        public IEnumerable<Product> GetAll()
+        public IEnumerable<Category> GetAll()
         {
-            return _context.Products.ToList();
+            return _context.Categories.ToList();
         }
 
-        [HttpGet("{id}", Name = "GetTodo")]
-        public IActionResult GetById(long id)
+        [HttpGet("{name}", Name = "GetCategory")]
+        public IActionResult GetById(string name)
         {
-            var item = _context.Products.FirstOrDefault(t => t.ProductId == id);
+            var item = _context.Categories.FirstOrDefault(t => t.CategoryName == name);
             if (item == null)
             {
 
