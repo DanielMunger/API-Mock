@@ -18,7 +18,8 @@ namespace API_4TELL.Controllers
 
             if (_context.Products.Count() == 0)
             {
-                _context.Products.Add(new Product { ProductId = 2,ProductName = "Item1" });
+                _context.Products.Add(new Product { ProductId = 2,ProductName = "Running Shoes" });
+                _context.Products.Add(new Product { ProductId = 3, ProductName = "Baseball Bat" });
                 _context.SaveChanges();
             }
         }
@@ -35,6 +36,7 @@ namespace API_4TELL.Controllers
             var item = _context.Products.FirstOrDefault(t => t.ProductId == id);
             if (item == null)
             {
+               
                 return NotFound();
             }
             return new ObjectResult(item);
