@@ -43,17 +43,17 @@ namespace API_4TELL.Controllers
             }
         }
 
-        [HttpGet("{id}", Name = "GetProduct")]
-        public IActionResult GetById(long id)
-        {
-            var product = _context.Products.FirstOrDefault(t => t.ProductId == id);
-            if (product == null)
-            {
+        //[HttpGet("{id}", Name = "GetProduct")]
+        //public IActionResult GetById(long id)
+        //{
+        //    var product = _context.Products.FirstOrDefault(t => t.ProductId == id);
+        //    if (product == null)
+        //    {
                
-                return NotFound();
-            }
-            return new ObjectResult(product);
-        }
+        //        return NotFound();
+        //    }
+        //    return new ObjectResult(product);
+        //}
     }
 }
 //public string Get(int? id, string firstName, string lastName, string address)

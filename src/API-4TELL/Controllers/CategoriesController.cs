@@ -35,21 +35,34 @@ namespace API_4TELL.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Category> GetAll()
+        public IActionResult GetAll(string categoryName)
         {
-            return _context.Categories.ToList();
-        }
-
-        [HttpGet("{name}", Name = "GetCategory")]
-        public IActionResult GetProducts(string name)
-        {
-            var category = _context.Categories.FirstOrDefault(t => t.CategoryName == name);
-            if (category == null)
+            if (categoryName != null)
             {
+                var category = _context.Categories.FirstOrDefault(t => t.CategoryName == categoryName);
+                if (category == null)
+                {
 
-                return NotFound();
+                    return NotFound();
+                }
+                return new ObjectResult(category);
             }
-            return new ObjectResult(category);
+            else
+            {
+                return new ObjectResult(_context.Categories.ToList());
+            }
         }
+
+        //[HttpGet("{name}", Name = "GetCategory")]
+        //public IActionResult GetProducts(string name)
+        //{
+        //    var category = _context.Categories.FirstOrDefault(t => t.CategoryName == name);
+        //    if (category == null)
+        //    {
+
+        //        return NotFound();
+        //    }
+        //    return new ObjectResult(category);
+        //}
     }
 }
