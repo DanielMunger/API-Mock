@@ -184,3 +184,7 @@
 "C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Models\ApplicationContext.cs"
 "C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Models\Category.cs"
 "C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Models\Product.cs"
+"C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Models\Repositories\EFCategoryRepository.cs"
+"C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Models\Repositories\EFProductRepository.cs"
+"C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Models\Repositories\ICategoryRepository.cs"
+"C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Models\Repositories\IProductRepository.cs"
