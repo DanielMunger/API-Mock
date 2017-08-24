@@ -175,6 +175,7 @@
 -r:"C:\Users\Daniel Munger\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll"
 -r:"C:\Users\Daniel Munger\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
 -resource:"C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\obj\Debug\netcoreapp1.0\API-4TELLdotnet-compile.deps.json",API-4TELL.deps.json
+"C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\HttpException.cs"
 "C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Program.cs"
 "C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Startup.cs"
 "C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Controllers\ApiController.cs"

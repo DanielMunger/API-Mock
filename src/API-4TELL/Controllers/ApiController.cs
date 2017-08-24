@@ -52,28 +52,18 @@ namespace API_4TELL.Controllers
             }
             if (categoryName != null)
             {
-                Debug.WriteLine("hello i am here");
                 var category = _context.Categories.FirstOrDefault(t => t.CategoryName == categoryName);
                 if (category == null)
                 {
-
                     return NotFound();
                 }
-                return new ObjectResult(category);
+                return new ObjectResult(category.Products);
             }
             else
             {
                 return new ObjectResult(_context.Products.ToList());
             }
         }
-        //[HttpGet]
-        //public IActionResult GetAll(string categoryName)
-        //{
-            
-        //    else
-        //    {
-        //        return new ObjectResult(_context.Categories.ToList());
-        //    }
-        //}
+       
     }
 }

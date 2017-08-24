@@ -19,7 +19,7 @@
     "API_4TELL": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "http://localhost:5000/api/products",
+      "launchUrl": "http://localhost:5000/api",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
