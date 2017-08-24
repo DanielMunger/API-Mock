@@ -8,6 +8,10 @@ namespace API_4TELL.Models
 {
     public class ApplicationContext : DbContext
     {
+        public ApplicationContext()
+        {
+
+        }
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options)
         {
