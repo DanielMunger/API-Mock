@@ -17,15 +17,15 @@ namespace API_4TELL.Controllers
         {
             _context = context;
 
-            Product runningShoes = new Product(3, "Running Shoes");
             Category running = new Category(1, "Running");
-            runningShoes.Category = running;
+            Product runningShoes = new Product(3, "Running Shoes", running.CategoryName);
+            // runningShoes.Category = running;
             running.Products.Add(runningShoes);
 
 
-            Product baseballBat = new Product(4, "baseball Bat");
             Category baseball = new Category(2, "Baseball");
-            baseballBat.Category = baseball;
+            Product baseballBat = new Product(4, "baseball Bat", baseball.CategoryName);
+            // baseballBat.Category = baseball;
             baseball.Products.Add(baseballBat);
 
             if (_context.Products.Count() == 0)
@@ -34,7 +34,6 @@ namespace API_4TELL.Controllers
                 _context.Products.Add(baseballBat);
                 _context.SaveChanges();
             }
-            // Something wrong in here?
             if (_context.Categories.Count() == 0)
             {
                 _context.Categories.Add(baseball);
@@ -68,7 +67,7 @@ namespace API_4TELL.Controllers
             }
             else
             {
-                return new ObjectResult(_context.Products.ToList());
+                return NotFound();
             }
         }
        
