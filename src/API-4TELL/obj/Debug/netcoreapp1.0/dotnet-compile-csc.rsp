@@ -177,6 +177,7 @@
 -resource:"C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\obj\Debug\netcoreapp1.0\API-4TELLdotnet-compile.deps.json",API-4TELL.deps.json
 "C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Program.cs"
 "C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Startup.cs"
+"C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Controllers\ApiController.cs"
 "C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Controllers\CategoriesController.cs"
 "C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Controllers\ProductsController.cs"
 "C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Models\ApplicationContext.cs"
