@@ -16,11 +16,16 @@ namespace API_4TELL.Controllers
         public ApiController(ApplicationContext context)
         {
             _context = context;
-            Product runningShoes = new Product(3, "Running Shoes", "Running");
+
+            Product runningShoes = new Product(3, "Running Shoes");
             Category running = new Category(1, "Running");
+            runningShoes.Category = running;
             running.Products.Add(runningShoes);
-            Product baseballBat = new Product(4, "baseball Bat", "Baseball");
+
+
+            Product baseballBat = new Product(4, "baseball Bat");
             Category baseball = new Category(2, "Baseball");
+            baseballBat.Category = baseball;
             baseball.Products.Add(baseballBat);
 
             if (_context.Products.Count() == 0)
@@ -29,10 +34,12 @@ namespace API_4TELL.Controllers
                 _context.Products.Add(baseballBat);
                 _context.SaveChanges();
             }
+            // Something wrong in here?
             if (_context.Categories.Count() == 0)
             {
                 _context.Categories.Add(baseball);
                 _context.Categories.Add(running);
+                Debug.WriteLine("baseball "+baseball.CategoryId);
                 _context.SaveChanges();
             }
         }
