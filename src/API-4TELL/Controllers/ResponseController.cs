@@ -42,9 +42,9 @@ namespace API_4TELL.Controllers
             }
             if (_context.Categories.Count() == 0)
             {
+                Debug.WriteLine("baseball products "+baseball.Products);
                 _context.Categories.Add(baseball);
                 _context.Categories.Add(running);
-                Debug.WriteLine("baseball " + baseball.CategoryId);
                 _context.SaveChanges();
             }
         }
@@ -68,11 +68,11 @@ namespace API_4TELL.Controllers
                 case "all":
                     return Ok(_context.Categories.ToList());
 
-                case "baseball":
-                    return Ok(_context.Categories.Where(c => c.CategoryName.ToLower() == "baseball").ToList());
+                case "baseball":                   
+                    return Ok(_context.Products.Where(c => c.Category.ToLower() == "baseball").ToList());
 
                 case "running":
-                    return Ok(_context.Categories.Where(c => c.CategoryName.ToLower() == "running").ToList());
+                    return Ok(_context.Products.Where(c => c.Category.ToLower() == "running").ToList());
                 default:
                     return NotFound();
 
