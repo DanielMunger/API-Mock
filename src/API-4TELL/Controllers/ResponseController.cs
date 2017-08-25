@@ -9,75 +9,47 @@ using System.Web.Http;
 using System.Net.Http;
 using System.Net;
 using Microsoft.AspNetCore.Http;
+using API_4TELL.Models.Repositories;
 
 namespace API_4TELL.Controllers
 {
     [Route("api")]
     public class ResponseController : ApiController
     {
-        private readonly ApplicationContext _context;
-    
-        public ResponseController(ApplicationContext context)
+        private ICategoryRepository categoryRepo;
+        private IProductRepository productRepo;
+        public ResponseController(IProductRepository productRepo = null)
         {
-            _context = context;
-
-            Category running = new Category(1, "Running");
-            Product runningShorts = new Product(1, "Running Shorts", running.CategoryName);
-            Product runningShoes = new Product(2, "Running Shoes", running.CategoryName);
-            running.Products.Add(runningShorts);
-            running.Products.Add(runningShoes);
-
-
-            Category baseball = new Category(2, "Baseball");
-            Product baseballBat = new Product(4, "baseball Bat", baseball.CategoryName);
-            Product baseballGlove = new Product(5, "baseball Glove", baseball.CategoryName);
-            baseball.Products.Add(baseballGlove);
-            baseball.Products.Add(baseballBat);
-
-            if (_context.Products.Count() == 0)
+            if (productRepo == null)
             {
-                _context.Products.Add(runningShoes);
-                _context.Products.Add(baseballBat);
-                _context.SaveChanges();
+                this.productRepo = new EFProductRepository();
             }
-            if (_context.Categories.Count() == 0)
+            else
             {
-                Debug.WriteLine("baseball products "+baseball.Products);
-                _context.Categories.Add(baseball);
-                _context.Categories.Add(running);
-                _context.SaveChanges();
+                this.productRepo = productRepo;
             }
         }
-
         [HttpGet]
         public IActionResult GetData(int? productId, string categoryName = "all")
         {
-             if (productId.HasValue)
+            if (productId.HasValue)
             {
-                var product = _context.Products.FirstOrDefault(t => t.ProductId == productId);
+                var product = productRepo.Products.FirstOrDefault(t => t.ProductId == productId);
                 if (product == null)
                 {
-
                     return NotFound();
                 }
                 return Ok(product);
-            }           
-
-            switch (categoryName.ToLower())
-            {
-                case "all":
-                    return Ok(_context.Categories.ToList());
-
-                case "baseball":                   
-                    return Ok(_context.Products.Where(c => c.Category.ToLower() == "baseball").ToList());
-
-                case "running":
-                    return Ok(_context.Products.Where(c => c.Category.ToLower() == "running").ToList());
-                default:
-                    return NotFound();
-
-
             }
+            if(categoryName != null)
+            {
+                var products = productRepo.Products.Where(t => t.Category == categoryName);
+                return Ok(products);
+            }  
+            else
+            {
+                return NotFound();
+            }          
 
         }
 
