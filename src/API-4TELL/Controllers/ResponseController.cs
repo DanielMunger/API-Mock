@@ -16,7 +16,7 @@ namespace API_4TELL.Controllers
     public class ResponseController : ApiController
     {
         private readonly ApplicationContext _context;
-
+    
         public ResponseController(ApplicationContext context)
         {
             _context = context;
@@ -50,7 +50,7 @@ namespace API_4TELL.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll(int? productId, string categoryName = "all")
+        public IActionResult GetData(int? productId, string categoryName = "all")
         {
              if (productId.HasValue)
             {
