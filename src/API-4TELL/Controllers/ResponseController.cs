@@ -56,6 +56,7 @@ namespace API_4TELL.Controllers
                 var products = productRepo.Products
                     .Where(t => t.Category.CategoryName == categoryName)                    
                     .ToList();
+
                 return Ok(products);
             }  
             else
