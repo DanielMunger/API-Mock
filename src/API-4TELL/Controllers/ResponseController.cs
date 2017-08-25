@@ -10,6 +10,7 @@ using System.Net.Http;
 using System.Net;
 using Microsoft.AspNetCore.Http;
 using API_4TELL.Models.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace API_4TELL.Controllers
 {
@@ -35,22 +36,24 @@ namespace API_4TELL.Controllers
         // 
         // 
         [HttpGet]
-        public IActionResult GetData(int? productId, string categoryName)
+        public async Task<IActionResult> GetData(int? productId, string categoryName)
         {
             if (productId.HasValue)
             {
-                var product = productRepo.Products                   
-                    .FirstOrDefault(t => t.ProductId == productId);
+                var product = productRepo.Products
+                    .Where(t => t.ProductId == productId);                                    
                 if (product == null)
                 {
                     return NotFound();
                 }
+                              
                 return Ok(product);
             }
             if(categoryName != null)
             {
                 var products = productRepo.Products
                     .Where(t => t.Category.CategoryName == categoryName)
+                    .Include(p => p.Category.Products)
                     .ToList();
                 return Ok(products);
             }  
