@@ -30,11 +30,7 @@ namespace API_4TELL.Controllers
                 this.productRepo = productRepo;
             }
         }
-        // TODO:
-        //
-        // Add error handling to catch incorrect queries. 
-        // 
-        // 
+
         [HttpGet]
         public async Task<IActionResult> GetData(int? productId, string categoryName)
         {
