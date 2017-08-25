@@ -44,10 +44,10 @@ namespace API_4TELL.Controllers
                     .Include(c => c.Category)
                     .Where(p => p.ProductId == productId)
                     .ToList();
-                                                 
-                if (product == null)
+                if (product.Count == 0)
                 {
-                    return NotFound();
+
+                    return BadRequest("Invalid Query. That Product Id Does Not Exist");
                 }              
                 return Ok(product);
             }
@@ -56,12 +56,16 @@ namespace API_4TELL.Controllers
                 var products = productRepo.Products
                     .Where(t => t.Category.CategoryName == categoryName)                    
                     .ToList();
-
+                if (products.Count == 0)
+                {
+                    
+                    return BadRequest("Invalid Query. That Category Does Not Exist.");
+                }
                 return Ok(products);
             }  
             else
             {                
-                return NotFound();
+                return BadRequest("Invalid Query. Please Format Your Query as api?productId='id' or api?categoryName='categoryName'.");
             }          
 
         }
