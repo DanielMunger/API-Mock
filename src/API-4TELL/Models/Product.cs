@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace API_4TELL.Models
 {
+    [Table("Products")]
     public class Product
     {
+        [Key]
         public int ProductId { get; set; }
         public string ProductName { get; set; }
 
-        // Change to public virtual Category Category for sql db. Not storing correctly locally.
+        // public virtual Category Category { get; set; }
         public string Category { get; set; }
 
         public Product()
