@@ -8,8 +8,8 @@
 -debug:full
 -nostdlib
 -nologo
-"C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\API-4TELL.Tests\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
--out:"C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\API-4TELL.Tests\bin\Debug\netcoreapp1.0\API-4TELL.Tests.dll"
+"C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\API-4TELL.Tests\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
+-out:"C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\API-4TELL.Tests\bin\Debug\netcoreapp1.0\API-4TELL.Tests.dll"
 -r:"C:\Users\Daniel Munger\.nuget\packages\dotnet-test-xunit\2.2.0-preview2-build1029\lib\netcoreapp1.0\dotnet-test-xunit.dll"
 -r:"C:\Users\Daniel Munger\.nuget\packages\Microsoft.ApplicationInsights\2.1.0\lib\dotnet5.4\Microsoft.ApplicationInsights.dll"
 -r:"C:\Users\Daniel Munger\.nuget\packages\Microsoft.ApplicationInsights.AspNetCore\1.0.0\lib\netstandard1.6\Microsoft.ApplicationInsights.AspNetCore.dll"
@@ -202,7 +202,8 @@
 -r:"C:\Users\Daniel Munger\.nuget\packages\xunit.extensibility.execution\2.1.0\lib\dotnet\xunit.execution.dotnet.dll"
 -r:"C:\Users\Daniel Munger\.nuget\packages\xunit.runner.reporters\2.2.0-beta2-build3300\lib\netstandard1.1\xunit.runner.reporters.dotnet.dll"
 -r:"C:\Users\Daniel Munger\.nuget\packages\xunit.runner.utility\2.2.0-beta2-build3300\lib\netstandard1.1\xunit.runner.utility.dotnet.dll"
--r:"C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\bin\Debug\netcoreapp1.0\API-4TELL.dll"
-"C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\API-4TELL.Tests\Program.cs"
-"C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\API-4TELL.Tests\Startup.cs"
-"C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\API-4TELL.Tests\ControllerTests\ResponseControllerTest.cs"
+-r:"C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\bin\Debug\netcoreapp1.0\API-4TELL.dll"
+"C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\API-4TELL.Tests\Program.cs"
+"C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\API-4TELL.Tests\Startup.cs"
+"C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\API-4TELL.Tests\ControllerTests\ResponseControllerTest.cs"
+"C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\API-4TELL.Tests\ModelTests\TestDbContext.cs"

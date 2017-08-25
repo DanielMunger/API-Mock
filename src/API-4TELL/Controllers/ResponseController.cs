@@ -52,8 +52,7 @@ namespace API_4TELL.Controllers
             if(categoryName != null)
             {
                 var products = productRepo.Products
-                    .Where(t => t.Category.CategoryName == categoryName)
-                    .Include(p => p.Category.Products)
+                    .Where(t => t.Category.CategoryName == categoryName)                    
                     .ToList();
                 return Ok(products);
             }  

@@ -1,5 +1,5 @@
---temp-output:C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\obj\Debug\netcoreapp1.0\
---out:C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\bin\Debug\netcoreapp1.0\API-4TELL.dll
+--temp-output:C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\obj\Debug\netcoreapp1.0\
+--out:C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\bin\Debug\netcoreapp1.0\API-4TELL.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -209,26 +209,26 @@
 --reference:C:\Users\Daniel Munger\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\Daniel Munger\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
 --reference:C:\Users\Daniel Munger\.nuget\packages\System.Xml.XmlSerializer\4.0.11\ref\netstandard1.3\System.Xml.XmlSerializer.dll
---resource:"C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\obj\Debug\netcoreapp1.0\API-4TELLdotnet-compile.deps.json",API-4TELL.deps.json
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\HttpException.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Program.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Startup.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Controllers\CategoriesController.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Controllers\ProductsController.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Controllers\ResponseController.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Migrations\20170825020816_InitialMigration.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Migrations\20170825020816_InitialMigration.Designer.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Migrations\20170825021055_Plurals.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Migrations\20170825021055_Plurals.Designer.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Migrations\20170825021308_ProductList.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Migrations\20170825021308_ProductList.Designer.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Migrations\20170825034703_ProductModelChange.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Migrations\20170825034703_ProductModelChange.Designer.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Migrations\ApplicationContextModelSnapshot.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Models\ApplicationContext.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Models\Category.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Models\Product.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Models\Repositories\EFCategoryRepository.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Models\Repositories\EFProductRepository.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Models\Repositories\ICategoryRepository.cs
-C:\Users\Daniel Munger\Documents\Visual Studio 2015\Projects\API-4TELL\src\API-4TELL\Models\Repositories\IProductRepository.cs
+--resource:"C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\obj\Debug\netcoreapp1.0\API-4TELLdotnet-compile.deps.json",API-4TELL.deps.json
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\HttpException.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Program.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Startup.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Controllers\CategoriesController.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Controllers\ProductsController.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Controllers\ResponseController.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Migrations\20170825020816_InitialMigration.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Migrations\20170825020816_InitialMigration.Designer.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Migrations\20170825021055_Plurals.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Migrations\20170825021055_Plurals.Designer.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Migrations\20170825021308_ProductList.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Migrations\20170825021308_ProductList.Designer.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Migrations\20170825034703_ProductModelChange.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Migrations\20170825034703_ProductModelChange.Designer.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Migrations\ApplicationContextModelSnapshot.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Models\ApplicationContext.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Models\Category.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Models\Product.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Models\Repositories\EFCategoryRepository.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Models\Repositories\EFProductRepository.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Models\Repositories\ICategoryRepository.cs
+C:\Users\Daniel Munger\documents\visual studio 2015\Projects\API-4TELL\src\API-4TELL\Models\Repositories\IProductRepository.cs
