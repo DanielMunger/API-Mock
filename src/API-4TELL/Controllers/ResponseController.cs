@@ -29,12 +29,18 @@ namespace API_4TELL.Controllers
                 this.productRepo = productRepo;
             }
         }
+        // TODO:
+        //
+        // Add error handling to catch incorrect queries. 
+        // 
+        // 
         [HttpGet]
-        public IActionResult GetData(int? productId, string categoryName = "all")
+        public IActionResult GetData(int? productId, string categoryName)
         {
             if (productId.HasValue)
             {
-                var product = productRepo.Products.FirstOrDefault(t => t.ProductId == productId);
+                var product = productRepo.Products                   
+                    .FirstOrDefault(t => t.ProductId == productId);
                 if (product == null)
                 {
                     return NotFound();
@@ -43,11 +49,15 @@ namespace API_4TELL.Controllers
             }
             if(categoryName != null)
             {
-                var products = productRepo.Products.Where(t => t.Category == categoryName);
+                var products = productRepo.Products
+                    .Where(t => t.Category.CategoryName == categoryName)
+                    .ToList();
                 return Ok(products);
             }  
             else
             {
+                //var categories = categoryRepo.Categories.ToList();
+                //return Ok(categories);
                 return NotFound();
             }          
 

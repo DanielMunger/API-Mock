@@ -17,13 +17,5 @@ namespace API_4TELL.Models
 
         public Category()
         { }
-
-        public Category(int id, string name)
-        {
-            CategoryId = id;
-            CategoryName = name;
-            Products = new List<Product>() { };
-        }
-
     } 
 }

@@ -20,11 +20,9 @@ namespace API_4TELL.Models
             : base(options)
         {
         }
-
-        // For Database Connection, if desired.
-
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
+        // Change connection string for local use.
             options.UseSqlServer(@"Server=DESKTOP-GC3DC7B\SQLEXPRESS;Database=4TELLAPI;integrated security=True;");
         }
         protected override void OnModelCreating(ModelBuilder builder)

@@ -13,13 +13,11 @@ namespace API_4TELL.Models
         [Key]
         public int ProductId { get; set; }
         public string ProductName { get; set; }
-
-        // public virtual Category Category { get; set; }
-        public string Category { get; set; }
+        public virtual Category Category { get; set; }
 
         public Product()
         { }
-        public Product(int id, string name, string category)
+        public Product(int id, string name, Category category)
         {
             ProductId = id;
             ProductName = name;
