@@ -10,5 +10,17 @@ namespace API_4TELL.Models.Repositories
         ApplicationContext db = new ApplicationContext();
         public IQueryable<Category> Categories
         { get { return db.Categories; } }
+
+        public EFCategoryRepository(ApplicationContext connection = null)
+        {
+            if (connection == null)
+            {
+                this.db = new ApplicationContext();
+            }
+            else
+            {
+                this.db = connection;
+            }
+        }
     }
 }
