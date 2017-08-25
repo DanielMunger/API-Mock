@@ -13,8 +13,9 @@ namespace API_4TELL.Models
 
         }
 
-        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Product> Products { get; set; }        
         public virtual DbSet<Category> Categories { get; set; }
+
 
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options)

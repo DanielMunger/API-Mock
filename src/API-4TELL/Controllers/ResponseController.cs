@@ -41,12 +41,14 @@ namespace API_4TELL.Controllers
             if (productId.HasValue)
             {
                 var product = productRepo.Products
-                    .Where(t => t.ProductId == productId);                                    
+                    .Include(c => c.Category)
+                    .Where(p => p.ProductId == productId)
+                    .ToList();
+                                                 
                 if (product == null)
                 {
                     return NotFound();
-                }
-                              
+                }              
                 return Ok(product);
             }
             if(categoryName != null)
@@ -57,9 +59,7 @@ namespace API_4TELL.Controllers
                 return Ok(products);
             }  
             else
-            {
-                //var categories = categoryRepo.Categories.ToList();
-                //return Ok(categories);
+            {                
                 return NotFound();
             }          
 
